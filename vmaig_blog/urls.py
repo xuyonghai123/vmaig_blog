@@ -3,7 +3,9 @@ from django.contrib.sitemaps.views import sitemap
 from django.contrib.sitemaps import FlatPageSitemap, GenericSitemap, Sitemap
 from django.core.urlresolvers import reverse
 
-from django.contrib import admin
+# from django.contrib import admin
+import xadmin
+xadmin.autodiscover()
 
 from blog.models import Article, News, Category, Column
 
@@ -64,7 +66,7 @@ sitemaps = {
 
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(xadmin.site.urls)),
     url(r'', include('blog.urls')),
     url(r'', include('vmaig_comments.urls')),
     url(r'', include('vmaig_auth.urls')),

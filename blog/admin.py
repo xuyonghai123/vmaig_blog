@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-from django.contrib import admin
+# from django.contrib import admin
 from blog.models import Article, Category, Carousel, Nav, Column, News
+import xadmin
 
-
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(object):
     search_fields = ('name',)
     list_filter = ('status', 'create_time')
     list_display = ('name', 'parent', 'rank', 'status')
     fields = ('name', 'parent', 'rank', 'status')
 
 
-class ArticleAdmin(admin.ModelAdmin):
+class ArticleAdmin(object):
     search_fields = ('title', 'summary')
     list_filter = ('status', 'category', 'is_top',
                    'create_time', 'update_time', 'is_top')
@@ -34,21 +34,21 @@ class ArticleAdmin(admin.ModelAdmin):
     )
 
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(object):
     search_fields = ('title', 'summary')
     list_filter = ('news_from', 'create_time')
     list_display = ('title', 'news_from', 'url', 'create_time')
     fields = ('title', 'news_from', 'url', 'summary', 'pub_time')
 
 
-class NavAdmin(admin.ModelAdmin):
+class NavAdmin(object):
     search_fields = ('name',)
     list_display = ('name', 'url', 'status', 'create_time')
     list_filter = ('status', 'create_time')
     fields = ('name', 'url', 'status')
 
 
-class ColumnAdmin(admin.ModelAdmin):
+class ColumnAdmin(object):
     search_fields = ('name',)
     list_display = ('name', 'status', 'create_time')
     list_filter = ('status', 'create_time')
@@ -56,16 +56,16 @@ class ColumnAdmin(admin.ModelAdmin):
     filter_horizontal = ('article',)
 
 
-class CarouselAdmin(admin.ModelAdmin):
+class CarouselAdmin(object):
     search_fields = ('title',)
     list_display = ('title', 'article', 'img', 'create_time')
     list_filter = ('create_time',)
     fields = ('title', 'article', 'img', 'summary')
 
 
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Article, ArticleAdmin)
-admin.site.register(News, NewsAdmin)
-admin.site.register(Nav, NavAdmin)
-admin.site.register(Column, ColumnAdmin)
-admin.site.register(Carousel, CarouselAdmin)
+xadmin.site.register(Category, CategoryAdmin)
+xadmin.site.register(Article, ArticleAdmin)
+xadmin.site.register(News, NewsAdmin)
+xadmin.site.register(Nav, NavAdmin)
+xadmin.site.register(Column, ColumnAdmin)
+xadmin.site.register(Carousel, CarouselAdmin)

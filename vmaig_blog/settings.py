@@ -40,6 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
 
+    'xadmin',
+    'crispy_forms',
+    # 'reversion',
     'blog',
     'vmaig_auth',
     'vmaig_comments',
@@ -83,8 +86,14 @@ WSGI_APPLICATION = 'vmaig_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog',    #你的数据库名称
+        'USER': 'root',   #你的数据库用户名
+        'PASSWORD': 'xuyh', #你的数据库密码
+        'HOST': '45.32.73.0', #你的数据库主机，留空默认为localhost
+        'PORT': '3306', #你的数据库端口
     }
 }
 
