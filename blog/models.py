@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.conf import settings
-
+from tinymce.models import HTMLField
 
 class string_with_title(str):
     """ 用来修改admin中显示的app名称,因为admin app 名称是用 str.title()显示的,
@@ -92,7 +92,7 @@ class Article(models.Model):
     tags = models.CharField(max_length=200, null=True, blank=True,
                             verbose_name=u'标签', help_text=u'用逗号分隔')
     summary = models.TextField(verbose_name=u'摘要')
-    content = models.TextField(verbose_name=u'正文')
+    content = HTMLField(verbose_name=u'正文')
     view_times = models.IntegerField(default=0)
     zan_times = models.IntegerField(default=0)
 

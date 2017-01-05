@@ -67,6 +67,7 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', include(xadmin.site.urls)),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'', include('blog.urls')),
     url(r'', include('vmaig_comments.urls')),
     url(r'', include('vmaig_auth.urls')),

@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-
+    'tinymce',
     'xadmin',
     'crispy_forms',
     # 'reversion',
@@ -227,5 +227,5 @@ QINIU_SECRET_KEY = ''
 QINIU_BUCKET_NAME = ''
 
 # 网站标题等内容配置
-WEBSITE_TITLE = u'Vmaig'
-WEBSITE_WELCOME = u'欢迎来到Vmaig'
+WEBSITE_TITLE = u'Blog'
+WEBSITE_WELCOME = u'欢迎来到Blog'
