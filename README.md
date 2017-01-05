@@ -169,3 +169,5 @@ http://vmaig.com
 请修改  blog/templates/blog/widgets/tags_cloud.html 中的 tags数组的内容。
 
 
+#更新日志
+2017/1/5 后台添加富文本编辑
