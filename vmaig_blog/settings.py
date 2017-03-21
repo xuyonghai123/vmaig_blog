@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'tinymce',
     'xadmin',
     'crispy_forms',
-    # 'reversion',
+    #'reversion',
     'blog',
     'vmaig_auth',
     'vmaig_comments',
@@ -90,9 +90,9 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',    #你的数据库名称
-        'USER': 'root',   #你的数据库用户名
-        'PASSWORD': 'xuyh', #你的数据库密码
-        'HOST': '45.32.73.0', #你的数据库主机，留空默认为localhost
+        'USER': 'admin',   #你的数据库用户名
+        'PASSWORD': 'some_pass', #你的数据库密码
+        'HOST': '45.76.219.61', #你的数据库主机，留空默认为localhost
         'PORT': '3306', #你的数据库端口
     }
 }
@@ -212,12 +212,12 @@ PAGE_NUM = 5
 # email配置
 # 如果想要支持ssl (比如qq邮箱) 见 https://github.com/bancek/django-smtp-ssl
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = ''                       # SMTP地址 例如: smtp.163.com
+EMAIL_HOST = 'smtp.sina.com'                       # SMTP地址 例如: smtp.163.com
 EMAIL_PORT = 25                       # SMTP端口 例如: 25
-EMAIL_HOST_USER = ''                  # 我自己的邮箱 例如: xxxxxx@163.com
-EMAIL_HOST_PASSWORD = ''              # 我的邮箱密码 例如  xxxxxxxxx
+EMAIL_HOST_USER = '2759577xuyh@sina.com'                  # 我自己的邮箱 例如: xxxxxx@163.com
+EMAIL_HOST_PASSWORD = 'xuyonghai1qaz'              # 我的邮箱密码 例如  xxxxxxxxx
 EMAIL_SUBJECT_PREFIX = u'vmaig'       # 为邮件Subject-line前缀,默认是'[django]'
-EMAIL_USE_TLS = True                  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false
+EMAIL_USE_TLS = False                  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
