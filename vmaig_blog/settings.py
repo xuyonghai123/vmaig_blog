@@ -89,10 +89,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog',    #你的数据库名称
-        'USER': 'admin',   #你的数据库用户名
-        'PASSWORD': 'some_pass', #你的数据库密码
-        'HOST': '45.76.219.61', #你的数据库主机，留空默认为localhost
+        'NAME': 'blog_test',    #你的数据库名称
+        'USER': 'root',   #你的数据库用户名
+        'PASSWORD': 'xuyh', #你的数据库密码
+        'HOST': '45.77.68.69', #你的数据库主机，留空默认为localhost
         'PORT': '3306', #你的数据库端口
     }
 }
